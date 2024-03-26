@@ -1,0 +1,6 @@
+<h2>PROJECTS</h2>
+<div class="projects-menu">
+  <a *ngFor="let project of projects" routerLink="/detail/{{project.id}}">
+    {{project.name}}
+  </a>
+</div>

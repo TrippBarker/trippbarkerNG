@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ProjectDetailComponent } from '../project-detail/project-detail.component';
 import { ProjectService } from '../services/project.service';
 import { MessageService } from '../services/messages.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -17,8 +18,9 @@ import { MessageService } from '../services/messages.service';
     NgIf,
     UpperCasePipe,
     FormsModule,
-    ProjectDetailComponent
-  ]
+    ProjectDetailComponent,
+    RouterLink
+  ],
 })
 export class ProjectsComponent {
   ngOnInit(): void {
@@ -26,12 +28,7 @@ export class ProjectsComponent {
   }
   constructor(private projectService: ProjectService, private messageService: MessageService) {}
   projects: Project[] = [];
-  selectedProject?: Project;
   getProjects(): void {
     this.projectService.getProjects().subscribe(projects => this.projects = projects)
-  }
-  onSelect(project: Project): void {
-    this.selectedProject = project;
-    this.messageService.add(`ProjectsComponent: Selected project id=${project.id}`);
   }
 }
