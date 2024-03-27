@@ -3,6 +3,9 @@ import { PROJECTS } from '../mockData/mock-projects';
 import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Project } from '../interfaces/project';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { ProjectService } from '../services/project.service';
 
 @Component({
   standalone: true,
@@ -17,5 +20,18 @@ import { Project } from '../interfaces/project';
   ]
 })
 export class ProjectDetailComponent {
+  constructor (
+    private route: ActivatedRoute,
+    private projectService: ProjectService,
+    private location: Location
+  ) {}
   @Input() project?: Project;
+  ngOnInit(): void {
+    this.getProject();
+  }
+  
+  getProject(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.projectService.getProject(id).subscribe(project => this.project = project);
+  }
 }
