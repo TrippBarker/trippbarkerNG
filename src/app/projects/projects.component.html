@@ -1,7 +1,7 @@
-<h2>My Projects</h2>
 <div id="projects">
-    <div *ngFor="let project of projects" class="project">
-        <a routerLink="/detail/{{project.id}}">
+    <div *ngFor="let project of projects" class="projectCont">
+        <a routerLink="/detail/{{project.ref}}" class="project">
+            <img src="" alt="" class="projectImg">
             <h2>{{project.name}}</h2>
         </a>
     </div>

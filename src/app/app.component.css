@@ -2,6 +2,11 @@
 * {
   font-family: "Azeret Mono", monospace;
 }
+
+body {
+  background-color: #E0FBFC;
+}
+
 nav {
   display: flex;
   justify-content: center;

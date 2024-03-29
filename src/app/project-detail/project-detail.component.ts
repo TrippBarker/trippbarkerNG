@@ -31,7 +31,7 @@ export class ProjectDetailComponent {
   }
   
   getProject(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.projectService.getProject(id).subscribe(project => this.project = project);
+    const ref = String(this.route.snapshot.paramMap.get('ref'));
+    this.projectService.getProject(ref).subscribe(project => this.project = project);
   }
 }

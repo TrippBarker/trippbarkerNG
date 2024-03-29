@@ -13,12 +13,12 @@ export class ProjectService {
     this.messageService.add('ProjectService: fetched projects');
     return projects;
   }
-  getProject(id: number): Observable<Project> {
+  getProject(ref: string): Observable<Project> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
-    const hero = PROJECTS.find(p => p.id === id)!;
-    this.messageService.add(`ProjectService: fetched project id=${id}`);
-    return of(hero);
+    const project = PROJECTS.find(p => p.ref === ref)!;
+    this.messageService.add(`ProjectService: fetched project id=${ref}`);
+    return of(project);
   }
   constructor(private messageService: MessageService) { }
 }
