@@ -14,4 +14,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig),
+stravaAccessToken = '5295e9ce86dba21b01d9fa879fded4b50c561bc1',
+stravaRefreshToken = '2fc6e7d43b0be9da9fa7e93a0ba616d38c200ab5';

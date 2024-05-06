@@ -8,12 +8,14 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BikeComponent } from './bike/bike.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
     DashboardComponent,
+    BikeComponent,
   ],
   imports: [
     BrowserModule,
