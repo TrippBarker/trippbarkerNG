@@ -7,33 +7,7 @@ body {
   background-color: #E0FBFC;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-nav a {
-  margin: 0 3rem 0 3rem;
+#title {
   text-decoration: none;
-  font-family: "Azeret Mono", monospace;
-  font-weight: bolder;
-  font-size: 2rem;
-  color: black;
-}
-
-nav a:visited {
-  color: black;
-}
-
-nav a:hover {
-  color: purple;
-  scale: 150%;
-}
-
-
-h1 {
-  color: #369;
-  font-family: "Azeret Mono", monospace;
-  font-size: 250%;
+  color: rgb(2, 77, 139);
 }
