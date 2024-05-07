@@ -8,7 +8,7 @@ import { BikeComponent } from './bike/bike.component';
 const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:ref', component: ProjectDetailComponent },
+  { path: 'project/:ref', component: ProjectDetailComponent },
   { path: 'bike', component: BikeComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];

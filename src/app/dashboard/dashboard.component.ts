@@ -13,10 +13,5 @@ export class DashboardComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.getProjects();
-  }
-
-  getProjects(): void {
-    this.projectService.getProjects().subscribe(projects => this.projects = projects.slice(1, 5));
   }
 }

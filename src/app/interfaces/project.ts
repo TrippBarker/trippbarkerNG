@@ -1,5 +1,5 @@
 export interface Project {
-    id: number;
+    id: string;
     ref: string;
     images: string[];
     technologies: string[];

@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { PROJECTS } from '../mockData/mock-projects';
 import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Project } from '../interfaces/project';
@@ -27,11 +26,5 @@ export class ProjectDetailComponent {
   ) {}
   @Input() project?: Project;
   ngOnInit(): void {
-    this.getProject();
-  }
-  
-  getProject(): void {
-    const ref = String(this.route.snapshot.paramMap.get('ref'));
-    this.projectService.getProject(ref).subscribe(project => this.project = project);
   }
 }
