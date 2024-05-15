@@ -1,6 +1,6 @@
 <div id="projects">
     <div *ngFor="let project of projects" class="projectCont">
-        <a routerLink="/project/{{project.ref}}" class="project">
+        <a href={{project.link}} class="project" target="_blank">
             <img src="" alt="" class="projectImg">
             <h2>{{project.name}}</h2>
         </a>

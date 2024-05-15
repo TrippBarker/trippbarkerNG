@@ -38,6 +38,7 @@ export class ProjectsComponent {
         images: project.data()['images'],
         technologies: project.data()['technologies'],
         name: project.data()['name'],
+        link: project.data()['link'],
         description: project.data()['description']
       }
       this.projects.push(newProject);
