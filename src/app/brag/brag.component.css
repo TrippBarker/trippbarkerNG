@@ -1,0 +1,23 @@
+#back {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: darkblue;
+    text-decoration: none;
+}
+
+#back:hover {
+    color: orangered;
+}
+
+#bragContainer, .dayContainer, #back {
+    margin-left: 1rem;
+}
+
+.dayContainer a {
+    font-weight: bolder;
+    color: darkblue;
+}
+
+.dayContainer a:hover {
+    color: orangered;
+}

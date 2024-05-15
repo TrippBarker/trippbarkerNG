@@ -9,6 +9,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BikeComponent } from './bike/bike.component';
+import { BragComponent } from './brag/brag.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BikeComponent } from './bike/bike.component';
     MessagesComponent,
     DashboardComponent,
     BikeComponent,
+    BragComponent,
   ],
   imports: [
     BrowserModule,

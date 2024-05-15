@@ -18,9 +18,12 @@ export class BikeComponent {
   }
   brags = new Array<Brag>();
   async getBrags(){
+    const numberFormatter = new Intl.NumberFormat('en-US');
     const brags = await getDocs(query(collection(db, 'brag')));
     brags.forEach((brag) => {
       let days = new Array<BragDay>();
+      let distance = 0;
+      let elevation = 0;
       for (let i = 0; i < 8; i++){
         let timestamp = new Timestamp(brag.data()['day'+i]['date']['seconds'], brag.data()['day'+i]['date']['nanoseconds'])
         let newDay: BragDay = {
@@ -32,11 +35,16 @@ export class BikeComponent {
           startLocation: brag.data()['day'+i]['startLocation'],
           stravaLink: brag.data()['day'+i]['stravaLink']
         }
+        distance += brag.data()['day'+i]['distance'];
+        elevation += brag.data()['day'+i]['elevation'];
+        console.log(elevation);
         days.push(newDay);
       }
       let newBrag: Brag = {
         year: brag.data()['year'],
-        days: days
+        days: days,
+        distance: numberFormatter.format(Math.round((distance + Number.EPSILON) * 100) / 100),
+        elevation: numberFormatter.format(Math.round((elevation + Number.EPSILON) * 100) / 100)
       }
       this.brags.push(newBrag);
     })

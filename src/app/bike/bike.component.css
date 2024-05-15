@@ -1,0 +1,23 @@
+.bikeContainer, .bragContainer, .gearContainer {
+    margin: .5rem 1rem .5rem 2rem;
+}
+
+.bragContainer h2 {
+    margin-bottom: .5rem;
+    color: darkblue;
+}
+
+.bragContainer h3 {
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
+.bragContainer:hover {
+    cursor: pointer;
+    margin-left: 3rem;
+    transition: .10s;
+}
+
+.bragContainer:hover h2 {
+    color: orangered;
+}
