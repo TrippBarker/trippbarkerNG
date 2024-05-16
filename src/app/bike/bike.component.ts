@@ -29,6 +29,7 @@ export class BikeComponent {
         let newDay: BragDay = {
           date: timestamp.toDate(),
           day: brag.data()['day'+i]['day'],
+          number: brag.data()['day'+i]['number'],
           distance: brag.data()['day'+i]['distance'],
           elevation: brag.data()['day'+i]['elevation'],
           endLocation: brag.data()['day'+i]['endLocation'],

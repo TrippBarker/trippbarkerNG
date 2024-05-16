@@ -21,3 +21,11 @@
 .dayContainer a:hover {
     color: orangered;
 }
+
+.bragImages {
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

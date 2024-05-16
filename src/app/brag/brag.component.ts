@@ -4,6 +4,7 @@ import { db } from '../../environments/environment';
 import { BragDay } from '../interfaces/bragday';
 import { Brag } from '../interfaces/brag';
 import { Timestamp } from "firebase/firestore";
+import { getDownloadURL, getStorage, listAll, ref } from "firebase/storage";
 import { doc, setDoc, getDoc, addDoc, collection, updateDoc, getDocs, limit, query, where, and, or } from 'firebase/firestore';
 
 @Component({
@@ -19,8 +20,14 @@ export class BragComponent {
     distance: "",
     elevation: ""
   }
-  ngOnInit(){
-    this.getBrag();
+  async ngOnInit(){
+    await this.getBrag();
+    this.brag.days.forEach((day) => {
+      console.log('hello');
+      console.log(this.brag.year.toString());
+      this.getImages(this.brag.year.toString(), day.number);
+    })
+    
   }
   async getBrag(){
     const bragYear = (this.route.snapshot.paramMap.get('year'));
@@ -34,6 +41,7 @@ export class BragComponent {
       let newDay: BragDay = {
         date: timestamp.toDate(),
         day: bragDoc.get('day'+i)['day'],
+        number: bragDoc.get('day'+i)['number'],
         distance: bragDoc.get('day'+i)['distance'],
         elevation: bragDoc.get('day'+i)['elevation'],
         endLocation: bragDoc.get('day'+i)['endLocation'],
@@ -51,5 +59,22 @@ export class BragComponent {
       elevation: numberFormatter.format(Math.round((elevation + Number.EPSILON) * 100) / 100)
     }
     this.brag = newBrag;
+  }
+
+  async getImages(year: string, day: string){
+    const storage = getStorage();
+    const listRef = ref(storage, 'brag/'+year+'/day'+day);
+    listAll(listRef).then((res) => {
+      res.items.forEach((itemRef) => {
+        getDownloadURL(ref(storage, itemRef.fullPath)).then((url) => {
+          let image = document.createElement('img');
+          image.src = url;
+          image.setAttribute('margin', '1rem');
+          image.setAttribute('height', '100%');
+          image.classList.add('bragImage');
+          document.getElementById('day'+day+'images')?.appendChild(image);
+        });
+      });
+    });
   }
 }

@@ -1,5 +1,5 @@
 <div id="brags" class="bikeContainer">
-    <h1>BRAG</h1>
+    <h1>Bike Ride Across Georgia</h1>
     <div *ngFor="let brag of brags" class="bragContainer" routerLink="/brag/{{brag.year}}">
         <h2>BRAG {{brag.year}}</h2>
         <h3>{{brag.days[0]['startLocation']}} to  {{brag.days[7]['endLocation']}} ({{brag.distance}} miles, {{brag.elevation}} feet climbed)</h3>
