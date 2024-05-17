@@ -29,3 +29,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
+img {
+    margin: 1rem;
+}

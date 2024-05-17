@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BikeComponent } from './bike/bike.component';
 import { BragComponent } from './brag/brag.component';
+import { ChecklistComponent } from './checklist/checklist.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { BragComponent } from './brag/brag.component';
     DashboardComponent,
     BikeComponent,
     BragComponent,
+    ChecklistComponent,
   ],
   imports: [
     BrowserModule,

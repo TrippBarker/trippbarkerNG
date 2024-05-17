@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { BikeComponent } from './bike/bike.component';
 import { BragComponent  } from './brag/brag.component';
+import { ChecklistComponent } from './checklist/checklist.component';
 
 const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'project/:ref', component: ProjectDetailComponent },
   { path: 'bike', component: BikeComponent },
   { path: 'brag/:year', component: BragComponent },
+  { path: 'checklist', component: ChecklistComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

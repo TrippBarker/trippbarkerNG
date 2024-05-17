@@ -63,15 +63,16 @@ export class BragComponent {
 
   async getImages(year: string, day: string){
     const storage = getStorage();
-    const listRef = ref(storage, 'brag/'+year+'/day'+day);
+    const listRef = ref(storage, 'brag/'+year+'/day'+day+'/thumbnails');
     listAll(listRef).then((res) => {
       res.items.forEach((itemRef) => {
         getDownloadURL(ref(storage, itemRef.fullPath)).then((url) => {
           let image = document.createElement('img');
+          image.id = itemRef.name;
           image.src = url;
-          image.setAttribute('margin', '1rem');
           image.setAttribute('height', '100%');
-          image.classList.add('bragImage');
+          image.style.setProperty('margin-right', '1rem');
+          image.style.setProperty('border-radius', '2rem');
           document.getElementById('day'+day+'images')?.appendChild(image);
         });
       });
