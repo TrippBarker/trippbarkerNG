@@ -22,7 +22,7 @@
 
 .dayContainer a {
     font-weight: bolder;
-    color: #293241;;
+    color: #293241;
 }
 
 .stats {
@@ -31,6 +31,10 @@
 
 .distance p, .elevation p, .time p {
     margin: 0;
+}
+
+p {
+    font-size: 1rem;
 }
 
 .distance, .elevation, .time {
@@ -55,6 +59,7 @@
     display: flex;
     flex-direction: row;
     height: 20rem;
+    padding-bottom: 1rem;
     overflow-x: scroll;
     overflow-y: hidden;
 }
@@ -75,4 +80,23 @@ img {
     .distance, .elevation {
         border-right: none;
     }
+}
+
+
+::-webkit-scrollbar {
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EE6C4D;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b64225;
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
 }
