@@ -6,20 +6,49 @@
 }
 
 #back:hover {
-    color: orangered;
+    color: #EE6C4D;
 }
 
 #bragContainer, .dayContainer, #back {
     margin-left: 1rem;
 }
 
+.dayContainer {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #98C1D9;
+}
+
 .dayContainer a {
     font-weight: bolder;
-    color: darkblue;
+    color: #293241;;
+}
+
+.stats {
+    display: flex;
+}
+
+.distance p, .elevation p, .time p {
+    margin: 0;
+}
+
+.distance, .elevation, .time {
+    padding-top: .5rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+}
+
+.distance, .elevation {
+    border-right: 1px solid #EE6C4D;
+}
+
+.elevation, .time {
+    padding-left: 1rem;
 }
 
 .dayContainer a:hover {
-    color: orangered;
+    color: #EE6C4D;
 }
 
 .bragImages {
@@ -32,4 +61,18 @@
 
 img {
     margin: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+    }
+
+    .elevation, .time {
+        padding-left: 0;
+    }
+
+    .distance, .elevation {
+        border-right: none;
+    }
 }

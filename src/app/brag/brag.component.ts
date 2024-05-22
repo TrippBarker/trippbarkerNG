@@ -43,6 +43,7 @@ export class BragComponent {
         day: bragDoc.get('day'+i)['day'],
         number: bragDoc.get('day'+i)['number'],
         distance: bragDoc.get('day'+i)['distance'],
+        movingTime: bragDoc.get('day'+i)['movingTime'],
         elevation: bragDoc.get('day'+i)['elevation'],
         endLocation: bragDoc.get('day'+i)['endLocation'],
         startLocation: bragDoc.get('day'+i)['startLocation'],
@@ -72,7 +73,7 @@ export class BragComponent {
           image.src = url;
           image.setAttribute('height', '100%');
           image.style.setProperty('margin-right', '1rem');
-          image.style.setProperty('border-radius', '2rem');
+          image.style.setProperty('border-radius', '1rem');
           document.getElementById('day'+day+'images')?.appendChild(image);
         });
       });

@@ -3,7 +3,20 @@
     <h1>BRAG {{brag.year}}</h1>
     <div *ngFor="let day of brag.days" class="dayContainer">
         <h2>day {{day.day}} <i>{{day.startLocation}} to {{day.endLocation}}</i></h2>
-        <p>{{day.distance}} miles, {{day.elevation}} feet climbed</p>
+        <div class="stats">
+            <div class="distance">
+                <p>distance</p>
+                {{day.distance}} mi
+            </div>
+            <div class="elevation">
+                <p>elevation gain</p>
+                {{day.elevation}} ft
+            </div>
+            <div class="time">
+                <p>moving time</p>
+                {{day.movingTime}}
+            </div>
+        </div>
         <p>see the ride <a href="{{day.stravaLink}}" target="_blank">here</a></p>
         <div id="day{{day.number}}images" class="bragImages"></div>
     </div>

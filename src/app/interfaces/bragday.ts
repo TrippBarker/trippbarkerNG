@@ -6,6 +6,7 @@ export interface BragDay {
     number: string;
     distance: number;
     elevation: number;
+    movingTime: string;
     endLocation: string;
     startLocation: string;
     stravaLink: string;

@@ -32,6 +32,7 @@ export class BikeComponent {
           number: brag.data()['day'+i]['number'],
           distance: brag.data()['day'+i]['distance'],
           elevation: brag.data()['day'+i]['elevation'],
+          movingTime: brag.data()['day'+i]['movingTime'],
           endLocation: brag.data()['day'+i]['endLocation'],
           startLocation: brag.data()['day'+i]['startLocation'],
           stravaLink: brag.data()['day'+i]['stravaLink']
