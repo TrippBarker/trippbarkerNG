@@ -16,8 +16,13 @@
 .dayContainer {
     padding: 1rem;
     margin: 1rem;
-    border-radius: 1rem;
-    background-color: #98C1D9;
+    border-radius: .5rem;
+    background-color: #eff5fe;
+    box-shadow: 0px 25px 50px 0px grey;
+}
+
+.header {
+    color: #293241;
 }
 
 .dayContainer a {
@@ -27,6 +32,11 @@
 
 .stats {
     display: flex;
+}
+
+.stat {
+    font-size: 2rem;
+    color: #293241;
 }
 
 .distance p, .elevation p, .time p {

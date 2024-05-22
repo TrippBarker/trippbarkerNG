@@ -72,8 +72,8 @@ export class BragComponent {
           image.id = itemRef.name;
           image.src = url;
           image.setAttribute('height', '100%');
-          image.style.setProperty('margin-right', '1rem');
-          image.style.setProperty('border-radius', '1rem');
+          image.style.setProperty('margin-right', '.5rem');
+          image.style.setProperty('border-radius', '.25rem');
           document.getElementById('day'+day+'images')?.appendChild(image);
         });
       });
