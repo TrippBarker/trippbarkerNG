@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BikeComponent } from './bike/bike.component';
 import { BragComponent } from './brag/brag.component';
 import { ChecklistComponent } from './checklist/checklist.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ChecklistComponent } from './checklist/checklist.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ProjectsComponent
+    ProjectsComponent,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -74,6 +74,10 @@ p {
     overflow-y: hidden;
 }
 
+google-map {
+    margin-right: 1rem;
+}
+
 img {
     margin: 1rem;
 }
