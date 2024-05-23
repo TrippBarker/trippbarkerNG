@@ -1,8 +1,4 @@
-<div *ngIf="project">
-    <h2>{{ project.name }} Details:</h2>
-    <div>id: {{project.id}}</div>
-    <div>
-        <label for="project-name">Project: </label>
-        <input id="project-name" [(ngModel)]="project.name" placeholder="name">
-    </div>
+<div>
+    <h1>{{project.name}}</h1>
+    <h2>{{project.description}}</h2>
 </div>

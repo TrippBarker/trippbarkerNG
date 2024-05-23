@@ -36,7 +36,6 @@ export class ProjectsComponent {
       const newProject: Project = {
         id: project.id,
         ref: project.data()['ref'],
-        images: project.data()['images'],
         technologies: project.data()['technologies'],
         name: project.data()['name'],
         link: project.data()['link'],
@@ -54,7 +53,7 @@ export class ProjectsComponent {
     const pathRef = ref(storage, 'project/'+projectRef+'/main.png');
     getDownloadURL(pathRef).then((url) => {
       let image = document.getElementById(projectRef+'IMG') as HTMLImageElement;
-      image.src = url;
+      image.style.backgroundImage = 'url('+url+')';
     })
   }
 }
