@@ -1,4 +1,9 @@
-<div>
+<div id="project">
     <h1>{{project.name}}</h1>
     <h2>{{project.description}}</h2>
+    <div class="detailContainer" *ngFor="let detail of details" id="{{detail.contentRef}}Cont">
+        <h2>{{detail.header}}</h2>
+        <p>{{detail.text}}</p>
+        <div id="{{detail.contentRef}}Content" class="detailContent"></div>
+    </div>
 </div>
