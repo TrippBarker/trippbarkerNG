@@ -4,5 +4,7 @@ export interface Project {
     technologies: string[];
     name: string;
     link: string;
+    liveSite: string;
+    repo: string;
     description: string;
 }

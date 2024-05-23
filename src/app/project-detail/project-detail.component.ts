@@ -29,6 +29,8 @@ export class ProjectDetailComponent {
     technologies: new Array<string>,
     name: '',
     link: '',
+    liveSite: '',
+    repo: '',
     description: ''
   };
 
@@ -49,13 +51,24 @@ export class ProjectDetailComponent {
       this.project.technologies = projectDoc.get('technologies');
       this.project.name = projectDoc.get('name');
       this.project.link = projectDoc.get('link');
+      this.project.liveSite = projectDoc.get('liveSite');
+      this.project.repo = projectDoc.get('repo');
       this.project.description = projectDoc.get('desc');
+      if (this.project.liveSite != 'null'){
+        let liveSite = document.getElementById('liveSite') as HTMLAnchorElement;
+        liveSite.href = this.project.liveSite;
+        liveSite.textContent = 'Live Demo';
+      }
+      if (this.project.repo != 'null'){
+        let repo = document.getElementById('repo') as HTMLAnchorElement;
+        repo.href = this.project.repo;
+        repo.textContent = 'GitHub Repo';
+      }
       let i = 1;
       while (detailsRef.get('sect-'+i)){
         let formatText = detailsRef.get('sect-'+i)['text'] as string;
         formatText = formatText.replaceAll('/n', '\n');
         formatText = formatText.replaceAll('/t', '\t');
-        console.log(formatText);
         let detail: ProjectDetail = {
           header: detailsRef.get('sect-'+i)['header'],
           text: formatText,

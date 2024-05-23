@@ -25,3 +25,16 @@
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+.link {
+    font-weight: bolder;
+    margin-right: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #EE6C4D;
+}
+
+.link:hover {
+    color: #b64225;;
+}
+

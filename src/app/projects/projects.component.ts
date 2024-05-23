@@ -39,6 +39,8 @@ export class ProjectsComponent {
         technologies: project.data()['technologies'],
         name: project.data()['name'],
         link: project.data()['link'],
+        liveSite: project.data()['liveSite'],
+        repo: project.data()['repo'],
         description: project.data()['description']
       }
       this.projects.push(newProject);
