@@ -1,7 +1,7 @@
 <div id="projects">
     <div *ngFor="let project of projects" class="projectCont">
         <a href={{project.link}} class="project" target="_blank">
-            <img src="" alt="" class="projectImg">
+            <img src="" alt="" class="projectImg" id="{{project.ref}}IMG">
             <h2>{{project.name}}</h2>
         </a>
     </div>

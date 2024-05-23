@@ -8,6 +8,7 @@ import { MessageService } from '../services/messages.service';
 import { RouterLink } from '@angular/router';
 import { db } from '../../environments/environment';
 import { doc, setDoc, getDoc, addDoc, collection, updateDoc, getDocs, limit, query, where, and, or } from 'firebase/firestore';
+import { getDownloadURL, getStorage, listAll, ref } from "firebase/storage";
 
 @Component({
   standalone: true,
@@ -42,6 +43,18 @@ export class ProjectsComponent {
         description: project.data()['description']
       }
       this.projects.push(newProject);
+    })
+    this.projects.forEach((project) => {
+      this.getProjectImage(project.ref);
+    })
+  }
+
+  async getProjectImage(projectRef: string){
+    const storage = getStorage();
+    const pathRef = ref(storage, 'project/'+projectRef+'/main.png');
+    getDownloadURL(pathRef).then((url) => {
+      let image = document.getElementById(projectRef+'IMG') as HTMLImageElement;
+      image.src = url;
     })
   }
 }
