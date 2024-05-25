@@ -10,15 +10,15 @@
 }
 
 #bragContainer, .dayContainer, #back {
-    margin-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
 }
 
 .dayContainer {
     padding: 1rem;
     margin: 1rem;
     border-radius: .5rem;
-    background-color: #eff5fe;
-    box-shadow: 0px 25px 50px 0px grey;
 }
 
 .header {
