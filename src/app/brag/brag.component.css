@@ -9,6 +9,10 @@
     color: #EE6C4D;
 }
 
+h1 {
+    color: #293241;
+}
+
 #bragContainer, .dayContainer, #back {
     margin-left: auto;
     margin-right: auto;
@@ -32,6 +36,7 @@
 
 .stats {
     display: flex;
+    margin-bottom: 15px;
 }
 
 .stat {
@@ -41,6 +46,12 @@
 
 .distance p, .elevation p, .time p {
     margin: 0;
+}
+
+.rideLink {
+    margin: 0px;
+    margin-bottom: 15px;
+    padding: 0px;
 }
 
 p {

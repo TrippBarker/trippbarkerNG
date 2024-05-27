@@ -17,7 +17,7 @@
                 <p><b class="stat">{{day.movingTime}}</b></p>
             </div>
         </div>
-        <p>see the ride <a href="{{day.stravaLink}}" target="_blank">here</a></p>
+        <p *ngIf="day.stravaLink != ''" class="rideLink">see the ride <a href="{{day.stravaLink}}" target="_blank">here</a></p>
         <div id="day{{day.number}}images" class="bragImages"></div>
     </div>
 </div>
