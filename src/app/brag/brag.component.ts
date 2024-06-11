@@ -20,6 +20,8 @@ export class BragComponent {
     distance: "",
     elevation: ""
   }
+  totalDist = 0;
+  totalElv = 0;
   async ngOnInit(){
     await this.getBrag();
     this.brag.days.forEach((day) => {
