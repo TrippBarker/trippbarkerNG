@@ -6,8 +6,10 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { BikeComponent } from './bike/bike.component';
 import { BragComponent  } from './brag/brag.component';
 import { ChecklistComponent } from './checklist/checklist.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const routes: Routes = [
+  { path: 'about-me', component: AboutMeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'project/:ref', component: ProjectDetailComponent },

@@ -12,6 +12,7 @@ import { BikeComponent } from './bike/bike.component';
 import { BragComponent } from './brag/brag.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     BikeComponent,
     BragComponent,
     ChecklistComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
