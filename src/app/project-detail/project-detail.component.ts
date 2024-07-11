@@ -28,9 +28,9 @@ export class ProjectDetailComponent {
     ref: '',
     technologies: new Array<string>,
     name: '',
-    link: '',
-    liveSite: '',
-    repo: '',
+    link: 'null',
+    liveSite: 'null',
+    repo: 'null',
     description: ''
   };
 
@@ -54,17 +54,8 @@ export class ProjectDetailComponent {
       this.project.liveSite = projectDoc.get('liveSite');
       this.project.repo = projectDoc.get('repo');
       this.project.description = projectDoc.get('desc');
-      if (this.project.liveSite != 'null'){
-        let liveSite = document.getElementById('liveSite') as HTMLAnchorElement;
-        liveSite.href = this.project.liveSite;
-        liveSite.textContent = 'Live Demo';
-      }
-      if (this.project.repo != 'null'){
-        let repo = document.getElementById('repo') as HTMLAnchorElement;
-        repo.href = this.project.repo;
-        repo.textContent = 'GitHub Repo';
-      }
       let i = 1;
+      console.log(this.project.repo);
       while (detailsRef.get('sect-'+i)){
         let formatText = detailsRef.get('sect-'+i)['text'] as string;
         formatText = formatText.replaceAll('/n', '\n');

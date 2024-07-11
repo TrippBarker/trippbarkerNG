@@ -1,8 +1,8 @@
 <div id="project">
     <h1>{{project.name}}</h1>
     <h2>{{project.description}}</h2>
-    <a id="repo" class="link"></a>
-    <a id="liveSite" class="link"></a>
+    <a id="repo" class="link" *ngIf="this.project.repo != 'null'" href="{{this.project.repo}}">GitHub REPO</a>
+    <a id="liveSite" class="link" *ngIf="this.project.liveSite != 'null'" href="{{this.project.liveSite}}">PROJECT LINK</a>
     <div class="detailContainer" *ngFor="let detail of details" id="{{detail.contentRef}}Cont">
         <h2>{{detail.header}}</h2>
         <p>{{detail.text}}</p>

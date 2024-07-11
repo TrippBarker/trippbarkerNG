@@ -7,11 +7,14 @@ body {
 }
 
 #projects {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    max-width: 500rem;
+    align-items: center;
+    max-width: 125rem;
 }
 
 .projectCont {
