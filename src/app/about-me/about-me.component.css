@@ -1,3 +1,14 @@
+#back {
+    font-weight: bolder;
+    font-size: 2rem;
+    color: darkblue;
+    text-decoration: none;
+}
+
+#back:hover {
+    color: #EE6C4D;
+}
+
 #about {
     margin-left: auto;
     margin-right: auto;
@@ -8,15 +19,29 @@
     align-items: flex-start;
 }
 
-h2 {
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact p {
     margin-bottom: 0px;
 }
 
-hr {
-    margin-top: 0px;
-    width: 100%;               
-    background-color:black;
-    height: 1px;
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: darkblue;
+}
+
+a:hover {
+    color: #EE6C4D;
+}
+
+h2 {
+    width: 100%;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid black;
 }
 
 #skills {
@@ -34,11 +59,15 @@ hr {
     display: flex;
 }
 
+.dotted {
+    border-bottom: 1px dashed lightslategray;
+}
+
 .xpTime {
-    width: 10rem;
+    width: 8rem;
     margin-right: 1rem;
 }
 
 .xpDets {
-    width: 39rem;
+    width: 41rem;
 }

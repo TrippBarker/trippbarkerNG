@@ -14,7 +14,7 @@
 
 .bragContainer:hover {
     cursor: pointer;
-    margin-left: 3rem;
+    padding-left: 1rem;
     transition: .10s;
 }
 
