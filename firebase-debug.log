@@ -1,0 +1,53 @@
+[debug] [2025-02-11T17:04:53.805Z] ----------------------------------------------------------------------
+[debug] [2025-02-11T17:04:53.809Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-02-11T17:04:53.810Z] CLI Version:   13.30.0
+[debug] [2025-02-11T17:04:53.810Z] Platform:      win32
+[debug] [2025-02-11T17:04:53.810Z] Node Version:  v22.14.0
+[debug] [2025-02-11T17:04:53.811Z] Time:          Tue Feb 11 2025 12:04:53 GMT-0500 (Eastern Standard Time)
+[debug] [2025-02-11T17:04:53.811Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-11T17:04:54.148Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-11T17:04:54.149Z] > authorizing via signed-in user (colemanbarker@gmail.com)
+[debug] [2025-02-11T17:04:54.149Z] [iam] checking project trippbarker-31e6e for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-02-11T17:04:54.151Z] Checked if tokens are valid: true, expires at: 1739297038250
+[debug] [2025-02-11T17:04:54.151Z] Checked if tokens are valid: true, expires at: 1739297038250
+[debug] [2025-02-11T17:04:54.153Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/trippbarker-31e6e:testIamPermissions [none]
+[debug] [2025-02-11T17:04:54.153Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/trippbarker-31e6e:testIamPermissions x-goog-quota-user=projects/trippbarker-31e6e
+[debug] [2025-02-11T17:04:54.153Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trippbarker-31e6e:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-02-11T17:04:54.618Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/trippbarker-31e6e:testIamPermissions 200
+[debug] [2025-02-11T17:04:54.618Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trippbarker-31e6e:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-02-11T17:04:54.619Z] Checked if tokens are valid: true, expires at: 1739297038250
+[debug] [2025-02-11T17:04:54.619Z] Checked if tokens are valid: true, expires at: 1739297038250
+[debug] [2025-02-11T17:04:54.619Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trippbarker-31e6e [none]
+[debug] [2025-02-11T17:04:54.914Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trippbarker-31e6e 200
+[debug] [2025-02-11T17:04:54.915Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trippbarker-31e6e {"projectId":"trippbarker-31e6e","projectNumber":"648512597814","displayName":"trippbarker","name":"projects/trippbarker-31e6e","resources":{"hostingSite":"trippbarker-31e6e","locationId":"us-central"},"state":"ACTIVE","etag":"1_30a539d4-5100-4908-a42e-11e76c88339e"}
+[info] 
+   Thank you for trying our early preview of Angular support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Angular version 16 - 18. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/angular
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-02-11T17:05:14.607Z] Error: Cannot find module '@angular-devkit/core/node'
+Require stack:
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\controller.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\commandUtils.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\database-get.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\index.js
+- C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1225:15)
+    at Function.resolve (node:internal/modules/helpers:146:19)
+    at relativeRequire (C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\utils.js:197:34)
+    at getAllTargets (C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\angular\utils.js:76:37)
+    at getValidBuildTargets (C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\angular\index.js:117:56)
+    at async prepareFrameworks (C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:200:35)
+    at async deploy (C:\Users\clmnb\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:58:13)
+[error] 
+[error] Error: An unexpected error has occurred.
