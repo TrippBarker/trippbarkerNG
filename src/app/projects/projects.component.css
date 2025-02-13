@@ -9,8 +9,6 @@ body {
 #projects {
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     align-items: center;
@@ -19,10 +17,6 @@ body {
 
 .projectCont {
     margin: 1rem;
-    background-color: green;
-    width: 50%;
-    max-width: 35rem;
-    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,22 +33,27 @@ body {
 }
 
 .project {
-    background-color: #98C1D9;
-    max-height: 25rem;
     width: 100%;
-    min-width: 25rem;
-    max-width: 35rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: .25rem;
     overflow: hidden;
 }
 
 .projectImg {
     background-color: #293241;
-    height: 100rem;
+    height: 10rem;
+    width: 20rem;
     overflow-x: hidden;
-    border-radius: .75rem .75rem 0 0;
+    border-radius: .5rem .5rem 0 0;
     background-size: cover;
+}
+
+.projectDets {
+    margin-left: 1rem;
+}
+
+h2 {
+    margin-top: 0;
 }
